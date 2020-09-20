@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez le grand maître marabout Aditi {% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('../image/contacter-le-fa.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">CONTACTEZ MAITRE MARABOUT ADITI</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{{ path('home') }}">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section">
+        <div class="container">
+            <div class="row d-flex contact-info">
+                <div class="col-md-3 d-flex">
+                    <div class="bg-light align-self-stretch box p-4 text-center">
+                        <h3 class="mb-4">Addresse</h3>
+                        <p>CH6R+86 Kétou, BENIN</p>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="bg-light align-self-stretch box p-4 text-center">
+                        <h3 class="mb-4">Téléphone</h3>
+                        <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="bg-light align-self-stretch box p-4 text-center">
+                        <h3 class="mb-4">Addresse Email </h3>
+                        <p><a href="mailto:info@maitre-aditi.com">info@maitre-aditi.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="bg-light align-self-stretch box p-4 text-center">
+                        <h3 class="mb-4">Site Web</h3>
+                        <p><a href="#">maitre-aditi.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+        <div class="container">
+            <div class="row d-flex align-items-stretch no-gutters">
+                <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+                    {%  for label, messages in app.flashes %}
+                        <div class="container-fluid">
+                            <div class="alert alert-{{ label }}">
+                                {% for message in messages %}
+                                    <p>{{ message | raw }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <div class="form-group">
+                            <input type="submit" value="Envoyer le message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="container" style=" background-color: #0c5460">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.490297181209!2d2.5883156147757624!3d7.410860294653029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjQnMzkuMSJOIDLCsDM1JzI1LjgiRQ!5e0!3m2!1sfr!2sbj!4v1596811937736!5m2!1sfr!2sbj" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}

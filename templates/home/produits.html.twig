@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos produits pour votre bien être {% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('../image/produit.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Produits</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{{ path('home') }}">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Nos produits <i class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                    <h2 class="mb-4">Nos produits</h2>
+                    <p>Voici quelques produits, qui sont destinés à votre bien être et, votre épanouissement personnel et professionnel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container-fluid px-4">
+            <div class="row">
+                {% for produit in produits %}
+                    <div class="col-md-3 course ftco-animate">
+                        <div class="img" style="background-image: url({{ vich_uploader_asset(produit, 'imageFile') }});"></div>
+                        <div class="text pt-4">
+                            <p class="meta d-flex">
+                                <span><i class="icon-euro_symbol mr-2"></i>{{ produit.prix|number_format(2, ',', '.') }}</span>
+                            </p>
+                            <h3><a href="#">{{ produit.nom }}</a></h3>
+                            <p> {{ produit.action }}</p>
+                            <p><a href="#" class="btn btn-primary">Voir plus</a></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            {{ knp_pagination_render(produits) }}
+                        </ul>
+                    </nav>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}

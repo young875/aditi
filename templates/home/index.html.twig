@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenu sur le site du marabout Aditi {% endblock %}
+
+{% block body %}
+
+    {% include 'partials/menu.html.twig' %}
+
+
+    <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image:url(../image/marabot-1.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                    <div class="col-md-6 ftco-animate">
+                        <h1 class="mb-4">Chaque problème à une solution</h1>
+                        <p>Avec le maître marabout Aditi vous êtes en de bonne mains. Amour, bonheur, richesse, chance, protection et guérison seront toujours avec vous.</p>
+                        <p><a href="{{ path('contact') }}" class="btn btn-primary px-4 py-3 mt-3">Contactez-nous</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image:url(../image/feuille-curry.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                    <div class="col-md-6 ftco-animate">
+                        <h1 class="mb-4">Des astuces faciles et efficaces pour vous</h1>
+                        <p>Découvrez les astuces que je postes quotidiennement  afin de vous aider à atteindre vous objectifs.</p>
+                        <p><a href="{{ path('astuces') }}" class="btn btn-primary px-4 py-3 mt-3">voir plus</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image:url(../image/index-1.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                    <div class="col-md-6 ftco-animate">
+                        <h1 class="mb-4">Des produits puissants pour un résultats rapide et durable</h1>
+                        <p>Découvrez mes produits et mes préparations, qui vous protègent, attirent les bonnes choses dans votre vie.</p>
+                        <p><a href="{{ path('produits') }}" class="btn btn-primary px-4 py-3 mt-3">voir plus</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftc-no-pb">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="img" style="background-image: url(../image/aditi.jpg); border"></div>
+                </div>
+                <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+                    <h2 class="mb-4">Maitre Aditi</h2>
+                    <p>
+                        J'ai apporté beaucoup d'aide dans la vie de plusieur personne. Je suis d'origine africaine plus précisément du benin. Personnellement, j'ai plusieurs années d'expérience dans les domaines suivants : La sorcellerie, Le Vaudou, La Magie, Les Sortilèges, La Confection de Talismans, La Confection de Bagues, etc et que j'avais hérités de mo père.
+                        <br>
+                        J'ai réuni beaucoup de couples, apporté du bonheur, du soulagement et du réconfort à énormément de gens grâce à mes Talismans,mes Bagues, mes savons de chances. Tous ces produits ont apporté de la bonne fortune à des gens qui en avaient besoin.
+                    </p>
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="fa fa-braille"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Géomancie Divinatoire</h3>
+                                    <p>Je questionne le Fâ pour savoir l'origine de votre problème, afin de trouver une solution adéquate.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="fa fa-shield-alt"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Protection spirituelle</h3>
+                                    <p>Toute personne à besoin de se protéger, venez découvrir mes produits de protections.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="fa fa-leaf"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Tradipraticien </h3>
+                                    <p>l'écorce, la feuille, c'est ce que Dieu nous à donner pour guérir nos maux. Venez essayer mes solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="fa fa-venus-mars"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Retour d’affection</h3>
+                                    <p>Votre partenaire reviendra vers vous, ça c'est le plus facile de mes nombreux savoirs .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4"><span>Articles</span> Récents</h2>
+                    <p>
+                        Je publie souvent des astuces et des recettes gratuits sur mon site afin de partager mes connaissances et pour aider des personnes dans le besoin.
+                        <br> Mes astuces sont faciles à réaliser, et vous jugerai de l'efficacité  vous-même.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                {% for produit in produits %}
+                    <div class="col-md-6 col-lg-4 ftco-animate">
+                        <div class="blog-entry">
+                            <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('{{ vich_uploader_asset(produit, 'imageFile') }}');">
+                            </a>
+                            <div class="text bg-white p-4">
+                                <h3 class="heading"><a href="#">{{ produit.nom }}</a></h3>
+                                <p>{{ produit.action }}</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <p class="mb-0"><a href="#" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+    {% include 'partials/footer.html.twig' %}
+
+{% endblock %}
